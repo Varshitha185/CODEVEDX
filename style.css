@@ -25,34 +25,52 @@ h1 {
     letter-spacing: 6px;
     margin-bottom: 5px;
     opacity: 0.9;
+    text-shadow:
+    0 0 20px rgba(0,0,0,.8);
+
+}
+
+body.dinosaur h1 {
+
+    color:
+    #f0dcc0;
 }
 
 .subtitle {
     color: rgba(255,255,255,0.6);
     font-size: 0.9rem;
     margin-bottom: 55px;
+    text-shadow:
+    0 0 10px rgba(0,0,0,.8);
+}
+
+body.dinosaur .subtitle {
+
+    color:
+    rgba(240,220,192,.7);
 }
 
 .thought-box {
-
-    width: 55%;
     max-width: 700px;
     min-height: 140px;
+    width: fit-content;
+    max-width: 700px;
+    padding: 40px 60px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 40px;
     border-radius: 18px;
-    background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(15px);
+    background: rgba(20,15,10,0.55);
+    backdrop-filter: blur(4px);
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 
         0 0 50px rgba(0,0,0,0.3);
     transition:
         transform 0.6s ease,
         opacity 0.6s ease;
+        
 }
 
 #thought {
@@ -105,73 +123,84 @@ button:hover {
 
 /* Dinosaur Theme Styles */
 body.dinosaur {
+
     background:
-    radial-gradient(
-        circle at top,
-        #5d4428,
-        #2d1f0f,
-        #0d0905
-    );
+
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+
+    url("dinosaur.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
 
     position: relative;
 }
 
 body.dinosaur::before {
+
     content: "";
 
     position: fixed;
+
     inset: 0;
 
     background-image:
-        radial-gradient(
-            rgba(255,255,255,0.05) 1px,
-            transparent 1px
-        );
 
-    background-size: 120px 120px;
+    radial-gradient(
+        rgba(255,220,180,.12) 1px,
+        transparent 1px
+    );
+
+    background-size:
+    180px 180px;
 
     animation:
-        dustDrift 60s linear infinite;
+    dustMove 60s linear infinite;
 
     pointer-events: none;
 
-    opacity: 0.4;
+    opacity: .5;
 }
 
-body.dinosaur::after {
-    content: "";
+body.dinosaur::after{
 
-    position: fixed;
-    inset: 0;
+    content:"";
+
+    position:fixed;
+
+    inset:0;
 
     background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,0.015),
-            transparent
-        );
+    rgba(0,0,0,.25);
 
-    animation:
-        heatWave 12s ease-in-out infinite;
-
-    pointer-events: none;
+    pointer-events:none;
 }
 
-@keyframes dustDrift {
+@keyframes dustMove {
 
     from {
+
         transform:
-            translateX(0)
-            translateY(0);
+        translateX(0)
+        translateY(0);
+
     }
 
     to {
-        transform:
-            translateX(-150px)
-            translateY(50px);
-    }
 
+        transform:
+        translateX(-200px)
+        translateY(80px);
+
+    }
 }
 
 @keyframes heatWave {
@@ -193,22 +222,48 @@ body.dinosaur::after {
 
 }
 
-/* Ocean Theme Styles */
-
-body.ocean {
+body.dinosaur .thought-box {
 
     background:
-        radial-gradient(
-            circle at center,
-            #0f3650,
-            #07151f,
-            #02060a
-        );
+    rgba(60,40,20,.35);
+
+    border:
+    1px solid rgba(255,220,180,.12);
+
+    backdrop-filter:
+    blur(6px);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.5);
+
+    
+}
+
+/* Crow Theme Styles */
+
+body.crow {
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+
+    url("crow.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
 
     position: relative;
 }
 
-body.ocean::before {
+body.crow::before {
 
     content: "";
 
@@ -220,34 +275,79 @@ body.ocean::before {
 
     radial-gradient(
         circle at 30% 40%,
-        rgba(0,180,255,0.15),
-        transparent 30%
+        rgba(255,255,255,.04),
+        transparent 400px
     ),
 
     radial-gradient(
-        circle at 70% 60%,
-        rgba(0,180,255,0.15),
-        transparent 30%
+        circle at 80% 60%,
+        rgba(255,255,255,.03),
+        transparent 500px
     );
 
     animation:
-        oceanGlow 10s ease-in-out infinite;
+    fogMove 25s ease-in-out infinite alternate;
 
     pointer-events: none;
 }
 
-@keyframes oceanGlow {
+body.crow::after {
 
-    0% {
-        opacity: 0.4;
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    rgba(0,0,0,.35);
+
+    pointer-events: none;
+}
+
+@keyframes fogMove {
+
+    from {
+
+        transform:
+        translateX(-30px);
+
     }
 
-    50% {
-        opacity: 1;
-    }
+    to {
 
-    100% {
-        opacity: 0.4;
+        transform:
+        translateX(30px);
+
     }
 }
 
+body.crow .thought-box {
+
+    background:
+    rgba(15,15,15,.55);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:
+    blur(4px);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,.5);
+}
+
+body.crow h1 {
+
+    color:
+    #d8d8d8;
+
+    text-shadow:
+    0 0 20px rgba(0,0,0,.8);
+}
+
+body.crow .subtitle {
+
+    color:
+    rgba(255,255,255,.65);
+}

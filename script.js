@@ -7,10 +7,10 @@ const thoughts = [
     text: "The first dinosaur fossil was discovered in 1824.",
     theme: "dinosaur"
     },
-    // {
-    //     text:"Crows can remeber human faces and hold grudges.",
-    //     theme: "crow"
-    // },
+    {
+        text:"Crows can remeber human faces and hold grudges.",
+        theme: "crow"
+    },
     // {
     // text: "We pass by serial killers every day and never know it.",
     // theme: "human_being"
