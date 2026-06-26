@@ -35,20 +35,20 @@ const thoughts = [
     },
     {
     text: "A crocodile cannot stick its tongue out.",
-    theme: "reptile"
+    theme: "dinosaur"
     },
-    // {
-    // text: "A group of flamingos is called a flamboyance.",
-    // theme: "ocean"
-    // },
-    // {
-    // text: "A shrimp's heart is in its head.",
-    // theme: "animal"
-    // },
-    // {
-    // text: "Cat urine glows under a black light.",
-    // theme: "animal"
-    // },
+    {
+    text: "A group of flamingos is called a flamboyance.",
+    theme: "flamboyance"
+    },
+    {
+    text: "A shrimp's heart is in its head.",
+    theme: "wildlife"
+    },
+    {
+    text: "Cat urine glows under a black light.",
+    theme: "wildlife"
+    },
     // {
     // text: "There are more stars in the universe than there are grains of sand on Earth.",
     // theme: "astronomy"
@@ -85,22 +85,22 @@ const thoughts = [
     // text: "Tug of war was an Olympic event until 1920.",
     // theme: "sports"
     // },
-    // {
-    // text: "All swans in England are the property of the Queen.",
-    // theme: "animal"
-    // },
-    // {
-    // text: "All polar bears are left-handed.",
-    // theme: "animal"
-    // },
+    {
+    text: "All swans in England are the property of the Queen.",
+    theme: "wildlife"
+    },
+    {
+    text: "All polar bears are left-handed.",
+    theme: "wildlife"
+    },
     // {
     // text: "All the ants on Earth weigh about as much as all the humans.",
     // theme: "insect"
     // },
-    // {
-    // text: "All mammals get their color from their skin, not their fur.",
-    // theme: "animal"
-    // },
+    {
+    text: "All mammals get their color from their skin, not their fur.",
+    theme: "wildlife"
+    },
     // {
     // text: "A group of unicorns is called a blessing.",
     // theme: "mythology"
