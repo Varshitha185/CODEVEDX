@@ -11,10 +11,24 @@ const thoughts = [
         text:"Crows can remeber human faces and hold grudges.",
         theme: "crow"
     },
-    // {
-    // text: "We pass by serial killers every day and never know it.",
-    // theme: "human_being"
-    // },
+    {
+    text: "We pass by serial killers every day and never know it.",
+    theme: "strangers"
+    },
+    {
+    text: "Most people you'll ever see will never know your name.",
+    theme: "strangers"
+},
+
+{
+    text: "Someone you've walked past has probably thought about you longer than you've thought about them.",
+    theme: "strangers"
+},
+
+{
+    text: "Every window lit up at night contains an entirely different life.",
+    theme: "strangers"
+},
     // {
     // text: "Sand is called that becuase it is in between the sea and land.",
     // theme: "beach"
