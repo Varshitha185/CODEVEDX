@@ -49,38 +49,42 @@ const thoughts = [
     text: "Cat urine glows under a black light.",
     theme: "wildlife"
     },
-    // {
-    // text: "There are more stars in the universe than there are grains of sand on Earth.",
-    // theme: "astronomy"
-    // },
-    // {
-    // text: "It would take 1,200,000 mosquitoes, each sucking once, to completely drain the average human of blood.",
-    // theme: "insect"
-    // },
-    // {
-    // text: "It would take 19 minutes for a human to die from total blood loss.",
-    // theme: "medicine"
-    // },
-    // {
-    // text: "It would take 19 minutes to fall to the center of the Earth if there were a tunnel and you could ignore air resistance and the Earth's rotation.",
-    // theme: "geography"
-    // },
+    {
+    text: "There are more stars in the universe than there are grains of sand on Earth.",
+    theme: "astronomy"
+    },
+    {
+    text: "It would take 1,200,000 mosquitoes, each sucking once, to completely drain the average human of blood.",
+    theme: "biology"
+    },
+    {
+    text: "It would take 19 minutes for a human to die from total blood loss.",
+    theme: "biology"
+    },
+    {
+    text: "It would take 19 minutes to fall to the center of the Earth if there were a tunnel and you could ignore air resistance and the Earth's rotation.",
+    theme: "impossible"
+    },
     // {
     // text: "The real name for the hashtag symbol is 'octothorpe'.",
-    // theme: "language"
+    // theme: "technology"
     // },
-    // {
-    // text: "The longest time between two twins being born is 87 days.",
-    // theme: "human_being"
-    // },
+    {
+    text: "The longest time between two twins being born is 87 days.",
+    theme: "strangers"
+    },
     // {
     // text: "The tiny pocket in jeans was designed to store pocket watches.",
     // theme: "fashion"
     // },
-    // {
-    // text: "There were active volcanoes on the moon when dinosaurs were alive.",
-    // theme: "astronomy"
-    // },
+    {
+    text: "There were active volcanoes on the moon when dinosaurs were alive.",
+    theme: "astronomy"
+    },
+    {
+        text: "The light from some stars started traveling toward Earth before humans existed.",
+        theme: "astronomy"  
+    },
     // {
     // text: "Tug of war was an Olympic event until 1920.",
     // theme: "sports"
@@ -93,18 +97,18 @@ const thoughts = [
     text: "All polar bears are left-handed.",
     theme: "wildlife"
     },
-    // {
-    // text: "All the ants on Earth weigh about as much as all the humans.",
-    // theme: "insect"
-    // },
+    {
+    text: "All the ants on Earth weigh about as much as all the humans.",
+    theme: "wildlife"
+    },
     {
     text: "All mammals get their color from their skin, not their fur.",
     theme: "wildlife"
     },
-    // {
-    // text: "A group of unicorns is called a blessing.",
-    // theme: "mythology"
-    // },
+    {
+    text: "A group of unicorns is called a blessing.",
+    theme: "flamboyance"
+    },
     // {
     // text: "The average person walks the equivalent of three times around the world in a lifetime.",
     // theme: "geography"
@@ -133,10 +137,10 @@ const thoughts = [
     // text: "Wearing a suit of armor was once considered a fashion statement in the 15th century.",
     // theme: "history"
     // },
-    // {
-    // text: "Wearing a necktie could reduce blood flow to the brain by up to 7.5%.",
-    // theme: "medicine"
-    // }
+    {
+    text: "Wearing a necktie could reduce blood flow to the brain by up to 7.5%.",
+    theme: "biology"
+    }
 
 ];
 
