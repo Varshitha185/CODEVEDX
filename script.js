@@ -29,14 +29,14 @@ const thoughts = [
     text: "Every window lit up at night contains an entirely different life.",
     theme: "strangers"
 },
-    // {
-    // text: "Sand is called that becuase it is in between the sea and land.",
-    // theme: "beach"
-    // },
-    // {
-    // text: "A crocodile cannot stick its tongue out.",
-    // theme: "reptile"
-    // },
+    {
+    text: "Sand is called that becuase it is in between the sea and land.",
+    theme: "beach"
+    },
+    {
+    text: "A crocodile cannot stick its tongue out.",
+    theme: "reptile"
+    },
     // {
     // text: "A group of flamingos is called a flamboyance.",
     // theme: "ocean"

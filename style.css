@@ -466,3 +466,100 @@ body.strangers .subtitle {
     color:
     rgba(255,255,255,.7);
 }
+
+body.beach {
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.30)
+    ),
+
+    url("beach.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+body.beach::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+    repeating-linear-gradient(
+        110deg,
+        transparent 0px,
+        rgba(255,255,255,.02) 20px,
+        transparent 40px
+    );
+
+    animation:
+    waterMove 12s linear infinite;
+
+    pointer-events: none;
+}
+
+body.beach::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+    radial-gradient(
+        circle at top right,
+        rgba(255,220,150,.15),
+        transparent 40%
+    );
+
+    pointer-events: none;
+}
+
+@keyframes waterMove {
+
+    from {
+
+        transform:
+        translateX(0);
+
+    }
+
+    to {
+
+        transform:
+        translateX(300px);
+
+    }
+}
+
+body.beach .thought-box {
+
+    background:
+    rgba(10,20,25,.55);
+
+    border:
+    1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:
+    blur(5px);
+}
+
+body.beach h1 {
+
+    color:
+    #f1ead8;
+}
