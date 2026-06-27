@@ -1544,3 +1544,21 @@ body.culture h1 {
     color:
     #f5ead8;
 }
+
+#counter {
+
+    margin-bottom: 30px;
+
+    color: rgba(255,255,255,.6);
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+#restartBtn {
+
+    display: none;
+
+    margin-top: 20px;
+}

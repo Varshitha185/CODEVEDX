@@ -146,7 +146,11 @@ const thoughts = [
 
 let unseenThoughts = [...thoughts];
 
-function newThought() {
+let history = [];
+
+let currentThought = null;
+
+function showThought(thoughtObj) {
 
     const thoughtBox =
         document.getElementById("thoughtBox");
@@ -155,54 +159,167 @@ function newThought() {
 
     setTimeout(() => {
 
-if (unseenThoughts.length === 0) {
+        thoughtBox.classList.remove("slide-out");
 
-    document.getElementById("thought").innerText =
-        "You've reached the end.\n\nEvery thought has passed.";
+        thoughtBox.classList.add("slide-right");
 
-    return;
-}
+        document.getElementById("thought").innerText =
+            thoughtObj.text;
 
-const randomIndex = Math.floor(
-    Math.random() * unseenThoughts.length
-);
+        document.body.className =
+            thoughtObj.theme;
 
-const selectedThought =
-    unseenThoughts[randomIndex];
+        requestAnimationFrame(() => {
 
-unseenThoughts.splice(
-    randomIndex,
-    1
-);
-        
-        document.getElementById("thought").innerText = selectedThought.text;
-        
-        document.body.className = "";
-        document.body.classList.add(selectedThought.theme);
+            requestAnimationFrame(() => {
 
-        // Instantly move to right
-        thoughtBox.style.transition = "none";
-        thoughtBox.style.transform = "translateX(150%)";
-        thoughtBox.style.opacity = "0";
+                thoughtBox.classList.remove("slide-right");
 
-        // Force browser repaint
-        thoughtBox.offsetHeight;
+            });
 
-        // Re-enable animation
-        thoughtBox.style.transition =
-            "transform 0.6s ease, opacity 0.6s ease";
-
-        // Slide into center
-        thoughtBox.style.transform = "translateX(0)";
-        thoughtBox.style.opacity = "1";
+        });
 
     }, 600);
 }
+
+function newThought() {
+
+    if (currentThought !== null) {
+
+        history.push(currentThought);
+
+    }
+
+    if (unseenThoughts.length === 0) {
+
+        document.getElementById("thought").innerText =
+            `You've reached the end.
+
+${thoughts.length} thoughts passed through you.`;
+
+        return;
+    }
+
+    const randomIndex = Math.floor(
+        Math.random() * unseenThoughts.length
+    );
+
+    currentThought =
+        unseenThoughts[randomIndex];
+
+    unseenThoughts.splice(
+        randomIndex,
+        1
+    );
+
+    showThought(currentThought);
+
+    document.getElementById("counter").innerText =
+`${unseenThoughts.length} thoughts remaining`;
+}
 newThought();
 
-document.getElementById("thought").innerText =
-    `You've reached the end.
+function previousThought() {
 
-${thoughts.length} thoughts passed through you.
+    if (history.length === 0) return;
 
-Come back tomorrow.`;
+    const previous =
+        history.pop();
+
+    unseenThoughts.unshift(
+        currentThought
+    );
+
+    currentThought =
+        previous;
+
+    showThought(currentThought);
+}
+
+function restartThoughts() {
+
+    unseenThoughts = [...thoughts];
+
+    history = [];
+
+    currentThought = null;
+
+    document.getElementById("restartBtn")
+        .style.display = "none";
+
+    newThought();
+}
+
+document.getElementById("restartBtn")
+    .style.display = "inline-block";
+
+let startX = 0;
+
+document.addEventListener(
+    "touchstart",
+    (e) => {
+
+        startX =
+            e.touches[0].clientX;
+
+    }
+);
+
+document.addEventListener(
+    "touchend",
+    (e) => {
+
+        const endX =
+            e.changedTouches[0].clientX;
+
+        const diff =
+            endX - startX;
+
+        if (diff < -50) {
+
+            newThought();
+
+        }
+
+        if (diff > 50) {
+
+            previousThought();
+
+        }
+
+    }
+);
+
+document.addEventListener(
+    "keydown",
+    (e) => {
+
+        if (e.key === "ArrowRight") {
+
+            newThought();
+
+        }
+
+        if (e.key === "ArrowLeft") {
+
+            previousThought();
+
+        }
+
+    }
+);
+
+let favorites = [];
+
+function toggleFavorite() {
+
+    if (!currentThought) return;
+
+    favorites.push(currentThought);
+
+    localStorage.setItem(
+        "favorites",
+        JSON.stringify(favorites)
+    );
+
+}
