@@ -62,7 +62,7 @@ const thoughts = [
     theme: "biology"
     },
     {
-    text: "It would take 19 minutes to fall to the center of the Earth if there were a tunnel and you could ignore air resistance and the Earth's rotation.",
+    text: "It would take 19 minutes to fall to the center of the Earth (if there were a tunnel and you could ignore air resistance and the Earth's rotation.)",
     theme: "impossible"
     },
     {
@@ -75,7 +75,7 @@ const thoughts = [
     },
     {
     text: "The tiny pocket in jeans was designed to store pocket watches.",
-    theme: "flamboyance"
+    theme: "history"
     },
     {
     text: "There were active volcanoes on the moon when dinosaurs were alive.",
@@ -144,7 +144,7 @@ const thoughts = [
 
 ];
 
-let currentIndex = -1;
+let unseenThoughts = [...thoughts];
 
 function newThought() {
 
@@ -155,18 +155,25 @@ function newThought() {
 
     setTimeout(() => {
 
-        let randomIndex;
+if (unseenThoughts.length === 0) {
 
-        do {
-            randomIndex = Math.floor(
-                Math.random() * thoughts.length
-            );
-        }
-        while (randomIndex === currentIndex);
+    document.getElementById("thought").innerText =
+        "You've reached the end.\n\nEvery thought has passed.";
 
-        currentIndex = randomIndex;
+    return;
+}
 
-        const selectedThought = thoughts[randomIndex];
+const randomIndex = Math.floor(
+    Math.random() * unseenThoughts.length
+);
+
+const selectedThought =
+    unseenThoughts[randomIndex];
+
+unseenThoughts.splice(
+    randomIndex,
+    1
+);
         
         document.getElementById("thought").innerText = selectedThought.text;
         
@@ -192,3 +199,10 @@ function newThought() {
     }, 600);
 }
 newThought();
+
+document.getElementById("thought").innerText =
+    `You've reached the end.
+
+${thoughts.length} thoughts passed through you.
+
+Come back tomorrow.`;

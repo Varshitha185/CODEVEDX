@@ -1036,7 +1036,7 @@ body.impossible {
         rgba(0,0,0,.40)
     ),
 
-    url("textures/impossible.jpg");
+    url("impossible.jpg");
 
     background-size: cover;
 
@@ -1459,7 +1459,7 @@ body.culture {
         rgba(0,0,0,.35)
     ),
 
-    url("textures/culture.jpg");
+    url("culture.jpg");
 
     background-size: cover;
 
