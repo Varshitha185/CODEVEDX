@@ -65,18 +65,18 @@ const thoughts = [
     text: "It would take 19 minutes to fall to the center of the Earth if there were a tunnel and you could ignore air resistance and the Earth's rotation.",
     theme: "impossible"
     },
-    // {
-    // text: "The real name for the hashtag symbol is 'octothorpe'.",
-    // theme: "technology"
-    // },
+    {
+    text: "The real name for the hashtag symbol is 'octothorpe'.",
+    theme: "language"
+    },
     {
     text: "The longest time between two twins being born is 87 days.",
     theme: "strangers"
     },
-    // {
-    // text: "The tiny pocket in jeans was designed to store pocket watches.",
-    // theme: "fashion"
-    // },
+    {
+    text: "The tiny pocket in jeans was designed to store pocket watches.",
+    theme: "flamboyance"
+    },
     {
     text: "There were active volcanoes on the moon when dinosaurs were alive.",
     theme: "astronomy"
@@ -85,10 +85,10 @@ const thoughts = [
         text: "The light from some stars started traveling toward Earth before humans existed.",
         theme: "astronomy"  
     },
-    // {
-    // text: "Tug of war was an Olympic event until 1920.",
-    // theme: "sports"
-    // },
+    {
+    text: "Tug of war was an Olympic event until 1920.",
+    theme: "history"
+    },
     {
     text: "All swans in England are the property of the Queen.",
     theme: "wildlife"
@@ -109,34 +109,34 @@ const thoughts = [
     text: "A group of unicorns is called a blessing.",
     theme: "flamboyance"
     },
-    // {
-    // text: "The average person walks the equivalent of three times around the world in a lifetime.",
-    // theme: "geography"
-    // },
-    // {
-    // text: "The average person has about 1,460 dreams a year.",
-    // theme: "psychology"
-    // },
-    // {
-    // text: "The average person has about 70,000 thoughts a day.",
-    // theme: "psychology"
-    // },
-    // {
-    // text: "The average person spends about six months of their life waiting for red lights to turn green.",
-    // theme: "traffic"
-    // },
-    // {
-    // text: "Japan has a 'Naki Sumo' festival where wrestlers compete to see who can make a baby cry first.",
-    // theme: "culture"
-    // },
-    // {
-    // text: "Japan has one vending machine for every 40 people.",
-    // theme: "technology"
-    // },
-    // {
-    // text: "Wearing a suit of armor was once considered a fashion statement in the 15th century.",
-    // theme: "history"
-    // },
+    {
+    text: "The average person walks the equivalent of three times around the world in a lifetime.",
+    theme: "lifetime"
+    },
+    {
+    text: "The average person has about 1,460 dreams a year.",
+    theme: "impossible"
+    },
+    {
+    text: "The average person has about 70,000 thoughts a day.",
+    theme: "biology"
+    },
+    {
+    text: "The average person spends about six months of their life waiting for red lights to turn green.",
+    theme: "lifetime"
+    },
+    {
+    text: "Japan has a 'Naki Sumo' festival where wrestlers compete to see who can make a baby cry first.",
+    theme: "culture"
+    },
+    {
+    text: "Japan has one vending machine for every 40 people.",
+    theme: "strangers"
+    },
+    {
+    text: "Wearing a suit of armor was once considered a fashion statement in the 15th century.",
+    theme: "history"
+    },
     {
     text: "Wearing a necktie could reduce blood flow to the brain by up to 7.5%.",
     theme: "biology"

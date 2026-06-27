@@ -1253,3 +1253,294 @@ body.lifetime .subtitle {
     color:
     rgba(255,255,255,.70);
 }
+
+body.language {
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.35)
+    ),
+
+    url("language.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+body.language::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+    radial-gradient(
+        circle at 20% 30%,
+        rgba(255,220,180,.08),
+        transparent 350px
+    ),
+
+    radial-gradient(
+        circle at 80% 60%,
+        rgba(255,255,255,.04),
+        transparent 400px
+    );
+
+    animation:
+    languageGlow 10s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+body.language::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    rgba(0,0,0,.25);
+
+    pointer-events: none;
+}
+@keyframes languageGlow {
+
+    from {
+
+        opacity: .5;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+}
+body.language .thought-box {
+
+    background:
+    rgba(20,15,10,.65);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:
+    blur(5px);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,.4);
+}
+body.language h1 {
+
+    color:
+    #f2eadc;
+
+    text-shadow:
+    0 0 15px rgba(0,0,0,.5);
+}
+body.language .subtitle {
+
+    color:
+    rgba(255,255,255,.70);
+}
+
+body.history {
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.40),
+        rgba(0,0,0,.40)
+    ),
+
+    url("history.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
+
+    position: relative;
+}
+body.history::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+
+    radial-gradient(
+        rgba(255,255,255,.08) 1px,
+        transparent 1px
+    );
+
+    background-size:
+    180px 180px;
+
+    animation:
+    historyDust 40s linear infinite;
+
+    pointer-events: none;
+}
+body.history::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    rgba(40,25,15,.25);
+
+    pointer-events: none;
+}
+@keyframes historyDust {
+
+    from {
+
+        transform:
+        translateY(0);
+    }
+
+    to {
+
+        transform:
+        translateY(100px);
+    }
+}
+body.history .thought-box {
+
+    background:
+    rgba(25,18,12,.68);
+
+    border:
+    1px solid rgba(255,230,180,.08);
+
+    backdrop-filter:
+    blur(5px);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,.4);
+}
+body.history h1 {
+
+    color:
+    #f0e4d2;
+}
+
+body.culture {
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.35)
+    ),
+
+    url("textures/culture.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
+
+    position: relative;
+}
+body.culture::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+    radial-gradient(
+        circle at 20% 30%,
+        rgba(255,180,80,.12),
+        transparent 300px
+    ),
+
+    radial-gradient(
+        circle at 80% 60%,
+        rgba(255,120,60,.08),
+        transparent 400px
+    );
+
+    animation:
+    cultureGlow 8s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+body.culture::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    rgba(0,0,0,.25);
+
+    pointer-events: none;
+}
+@keyframes cultureGlow {
+
+    from {
+
+        opacity: .5;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+}
+body.culture .thought-box {
+
+    background:
+    rgba(20,15,10,.68);
+
+    border:
+    1px solid rgba(255,220,180,.08);
+
+    backdrop-filter:
+    blur(5px);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,.4);
+}
+body.culture h1 {
+
+    color:
+    #f5ead8;
+}
